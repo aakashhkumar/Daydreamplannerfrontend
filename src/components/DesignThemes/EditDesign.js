@@ -10,7 +10,7 @@ function EditDesign(){
     const [newData, setNewData] = useState([]);
 
     useEffect(() => {
-        Axios.get("http://localhost:4000/weddingRoute/update-design_themes/"+id)
+        Axios.get("https://daydreamer-backend.onrender.com/weddingRoute/update-design_themes/"+id)
             .then((res) => {
                 if (res.status === 200) {
                     const { name, price } = res.data;
@@ -29,7 +29,7 @@ function EditDesign(){
 
     const handleSubmit = () => {
         const data = { name: newData[0], price: newData[1]};
-        Axios.put("http://localhost:4000/weddingRoute/update-design_themes/"+id,data)
+        Axios.put("https://daydreamer-backend.onrender.com/weddingRoute/update-design_themes/"+id,data)
             .then((res) => {
                 if (res.status === 200)
                     alert("Record updated successfully")
