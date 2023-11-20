@@ -13,7 +13,7 @@ function Createdesign_themes()
 
     const handleSubmit = () => {
         const data = {name: arr[0],price:arr[1]};
-        Axios.post("http://localhost:4000/weddingRoute/create-design_themes",data)
+        Axios.post("https://daydreamer-backend.onrender.com/weddingRoute/create-design_themes",data)
         .then((res)=>{
             if(res.status === 200)
                 alert("New Design Theme added successfully");
