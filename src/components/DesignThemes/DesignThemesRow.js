@@ -6,7 +6,7 @@ function DesignThemesRow(props){
     const {_id,name, price} = props.obj; 
 
     const handleClick = () => {
-        Axios.delete("http://localhost:4000/weddingRoute/delete-design_themes/" + _id)
+        Axios.delete("https://daydreamer-backend.onrender.com/weddingRoute/delete-design_themes/" + _id)
             .then((res) => {
                 if (res.status === 200) {
                     alert("Record deleted successfully");
